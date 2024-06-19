@@ -1,0 +1,58 @@
+<h2>My List</h2>
+
+<ul *ngIf="items.length" class="items">
+
+    <!-- <li *ngFor="let item of items">
+        {{item.name}}
+    </li> -->
+
+    <li *ngFor="let item of items" (click)="onSelect(item)" [class.selected]="item === selectedItem">
+        {{item.id}}: {{item.name}}
+    </li>
+
+</ul>
+
+<ng-template #notSelectedItem>
+    <h3>Not selected item</h3>
+</ng-template>
+
+<div *ngIf="items.length > 0; else notItems">
+    {{items.length}} {{items.length == 1 ? 'item' : 'items'}}
+</div>
+
+<ng-template #notItems>
+    <h3>
+        No Items
+    </h3>
+</ng-template>
+
+<ng-container *ngIf="selectedItem; else notSelectedItem">
+    <h2>{{selectedItem.name}} details</h2>
+    <div>
+        <span>id: </span> {{selectedItem.id}}
+    </div>
+
+    <div>
+        <label> name:
+            <input [(ngModel)]="selectedItem.name" placeholder="name">
+        </label>
+    </div>
+
+    <div>
+        <label>is complete:
+            <input type = "checkbox" [(ngModel)] = "selectedItem.isComplete"/>
+        </label>
+    </div>
+</ng-container>
+
+
+<div *ngIf="isloader">
+    Loader...
+</div>
+
+<div [ngSwitch]="car">
+    <p *ngSwitchCase="'Audi'">This is Audi</p>
+    <p *ngSwitchCase="'BMW'">This is BMW</p>
+    <p *ngSwitchCase="'Mercedes'">This is Mercedes</p>
+    <p *ngSwitchDefault>Car is undefined</p>
+</div>
