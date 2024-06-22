@@ -1,0 +1,31 @@
+<div id="buttons">
+    <button (click)="openSkillList()">Навички даної персони</button>
+    <button (click)="openCertificateList()">Сертифікати даної персони</button>
+    <button (click)="openLinkList()">Посилання даної персони</button>
+    <button>Фото даної персони</button>
+</div>
+
+<div id="skills" [ngClass]="{invisible: !isSkillsVisible}">Навички:
+    <br><br>
+    <li *ngFor="let skill of skills">
+        {{skill.skill}}
+    </li>
+</div>
+<br>
+<div id="certificates" [ngClass]="{invisible: !isCertifivateVisible}">Сертифікати:
+    <br><br>
+    <li *ngFor="let certificate of certificates">
+        {{certificate.certificate}}
+    </li>
+</div>
+
+<br>
+
+<div id="links" [ngClass]="{invisible: !isLinkVisible}">Посилання:
+    <br><br>
+    <li *ngFor="let link of links">
+        <a [href]="link.link" target="_blank">{{ link.link }}</a>
+    </li>
+</div>
+
+<br>
