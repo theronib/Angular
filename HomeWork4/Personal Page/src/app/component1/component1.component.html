@@ -1,0 +1,10 @@
+<div [ngClass]="{underline: isUnderline}" id="resume-part-one">
+    <h3>Персональна сторінка / резюме</h3>
+    <p>{{"піб" | uppercase}}: {{pib}}</p>
+    <p>{{"вік" | uppercase}}: {{age}}</p>
+    <p>{{"телефон" | uppercase}}: {{phoneNumber}}</p>
+    <p>{{"email" | uppercase}}: {{email}}</p>
+    <p>{{"місто проживання" | uppercase}}: {{city}}</p>
+    <p>{{"Дата народження" | uppercase}}: {{birthDate | date }}</p>
+    <p>{{"Бажана зарплата" | uppercase}}: {{salary | currency:"USD":"symbol-narrow"  }}</p>
+</div>

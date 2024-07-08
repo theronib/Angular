@@ -1,0 +1,40 @@
+.invisible {
+  display: none;
+}
+
+#skills, #certificates, #links, #photo{
+  border-radius: 10px;
+  border: 5px solid #29455e;;
+  padding: 20px;
+  background-color: white;
+  width: 30%;
+  margin: auto;
+}
+
+#skills{
+  margin-top: 20px;
+}
+
+#photo{
+  margin-top: 20px;
+}
+
+button{
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: #ecd5b4;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 5px 5px 5px #e78b8c;
+}
+
+#buttons{
+  background-color: white;
+  padding: 20px;
+  width: 65%;
+  text-align: center;
+  border: 5px solid #29455e;
+  border-radius: 10px;
+  margin: auto;
+}
